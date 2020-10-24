@@ -1,0 +1,428 @@
+{
+  "proxy": [
+    {
+      "name": "ProxySite",
+      "link": "www.proxysite.com",
+      "isExtra": false,
+      "markup1": "<input placeholder=\"Enter Url\" type=\"text\" autocomplete=\"off\" name=\"d\" value=\"\">",
+      "markup2": "<input type=\"text\" name=\"d\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input url-text\">"
+    },
+    {
+      "name": "Hide My Ass",
+      "link": "www.hidemyass.com",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" id=\"form_url_fake\" required=\"required\" placeholder=\"Try https://www.hidemyass.com/en-gb/lp-proxy-no-url\" autocomplete=\"off\">",
+      "markup2": "<input type=\"text\" id=\"hma-top-input-url\" name=\"form[url]\" required=\"required\" placeholder=\"\" autocomplete=\"off\" value=\"https://www.google.com/?gws_rd=ssl\">"
+    },
+    {
+      "name": "Sitenable Web Proxy",
+      "link": "www.sitenable.com",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "FilterByPass",
+      "link": "www.filterbypass.me",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" name=\"k\" id=\"prform\" placeholder=\"Type the url of the website you want to unblock here e.g  http://www.youtube.com\" value=\"\">",
+      "markup2": "<input type=\"text\" name=\"k\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\">"
+    },
+    {
+      "name": "ProxFree",
+      "link": "www.proxfree.com",
+      "isExtra": false,
+      "markup1": "<input name=\"get\" type=\"text\" class=\"pfproxInp\" value=\"http://www.google.com/\" onfocus=\"if(this.value=='http://www.google.com/')this.value=''\" onblur=\"if(this.value=='')this.value='http://www.google.com/'\">",
+      "markup2": "<input name=\"get\" type=\"text\" class=\"pfaddressBar\" value=\"https://www.google.com/?gws_rd=ssl\" onclick=\"this.select();\">"
+    },
+    {
+      "name": "Hidester",
+      "link": "https://hidester.com/proxy/",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" placeholder=\"Enter URL\" id=\"input\" name=\"u\" class=\"hidester-hero-proxy-form-input\">",
+      "markup2": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"form-control\" placeholder=\"URL\">"
+    },
+    {
+      "name": "GenMirror",
+      "link": "https://www.genmirror.com/",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"urldown\" class=\"form-control\" value=\"\" placeholder=\"Enter URL here...\" autocomplete=\"off\" autocorrect=\"off\" required=\"\">",
+      "markup2": "<input name=\"u\" value=\"\" onclick=\"this.select();\" type=\"text\" class=\"url-input\">"
+    },
+    {
+      "name": "UnblockVideos",
+      "link": "https://unblockvideos.com/",
+      "isExtra": false,
+      "markup1": "<input type=\"text\" name=\"url\" id=\"url\" spellcheck=\"false\" autocomplete=\"off\" placeholder=\"http://\" class=\"form-control form-control-lg mr-4\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.youtube.com/feed/trending\" autocomplete=\"off\">"
+    },
+    {
+      "name": "Anonymouse",
+      "link": "http://anonymouse.org/anonwww.html",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" size=\"36\" value=\"http://\" name=\"what\" onclick=\"if(dblclick!=1){this.select();dblclick=1;}\" onblur=\"dblclick=0;\">",
+      "markup2": "http://anonymouse.org/cgi-bin/anon-www.cgi/http://www.google.com/webhp?hl=en"
+    },
+    {
+      "name": "Kproxy",
+      "link": "https://kproxy.com/",
+      "isExtra": true,
+      "markup1": "<input value=\"http://www.google.com/\" class=\"input\" name=\"page\" type=\"text\" id=\"maintextfield\">",
+      "markup2": "<input id=\"kproxy_float_surfbar_input\" value=\"https://www.google.com/?gws_rd=ssl\" name=\"page\" type=\"text\">"
+    },
+    {
+      "name": "BlewPass",
+      "link": "https://www.blewpass.com/",
+      "isExtra": true,
+      "markup1": "<input autocomplete=\"off\" type=\"text\" placeholder=\"http://www.youtube.com\" name=\"u\">",
+      "markup2": "<input autocomplete=\"off\" class=\"foreverproxy-input\" id=\"foreverproxy-u\" placeholder=\"http://www.google.com/\" type=\"text\" name=\"u\" value=\"https://www.youtube.com/\" forevermutated=\"true\" data-placeholder=\"http://www.google.com/\">"
+    },
+    {
+      "name": "AtozProxy",
+      "link": "https://www.atozproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"urldown\" class=\"form-control\" value=\"\" placeholder=\"Enter URL here\" autocomplete=\"off\" autocorrect=\"off\" required=\"\">",
+      "markup2": "<input name=\"u\" value=\"\" onclick=\"this.select();\" type=\"text\" class=\"url-input\">"
+    },
+    {
+      "name": "QuickProxy",
+      "link": "https://quickproxy.co.uk/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" class=\"input\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "4Ever Proxy",
+      "link": "https://www.4everproxy.com/",
+      "isExtra": true,
+      "markup1": "<input class=\"group-stretch\" autocomplete=\"off\" type=\"text\" name=\"u\" placeholder=\"https://www.google.com/\">",
+      "markup2": "<input autocomplete=\"off\" class=\"foreverproxy-input\" id=\"foreverproxy-u\" placeholder=\"http://www.google.com/\" type=\"text\" name=\"u\" value=\"https://www.google.com/\" forevermutated=\"true\" data-placeholder=\"http://www.google.com/\">"
+    },
+    {
+      "name": "Unblockytproxy",
+      "link": "https://www.unblockytproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" value=\"https://www.youtube.com\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.youtube.com?disable_polymer=true\" class=\"url-input\" style=\"width:30%;\">"
+    },
+    {
+      "name": "FreeProxyServer",
+      "link": "https://www.freeproxyserver.co/",
+      "isExtra": true,
+      "markup1": "<input class=\"span6\" placeholder=\"Enter URL\" name=\"u\" id=\"input\" type=\"text\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "YellowProxy",
+      "link": "https://www.yellowproxy.net/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "AwebProxy",
+      "link": "https://www.awebproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Zalmos",
+      "link": "https://www.zalmos.com/",
+      "isExtra": true,
+      "markup1": "<input class=\"form-control\" type=\"text\" id=\"appendedInputButton\" value=\"\" name=\"u\" placeholder=\"Enter URL then...\" onfocus=\"this.select();\">",
+      "markup2": "<input class=\"form-control\" placeholder=\"Search or enter address\" type=\"text\" name=\"url\" value=\"http://www.google.com/\" autocomplete=\"off\" onfocus=\"this.select();\">"
+    },
+    {
+      "name": "Unblockbook",
+      "link": "http://www.unblockbook.biz/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"f\" id=\"input\" size=\"40\" class=\"textbox\" value=\"http://www.facebook.com\">",
+      "markup2": "<input type=\"text\" name=\"data\" size=\"50\" value=\"https://www.google.com/?gws_rd=ssl\" style=\"width:500px;border: 1px solid #447900;\" onclick=\"highlight(this);\">"
+    },
+    {
+      "name": "ProxylistPro",
+      "link": "https://proxylistpro.com/",
+      "isExtra": true,
+      "markup1": "<input id=\"address\" name=\"u\" value=\"https://www.google.com/\" onblur=\"if(this.value=='')this.value='https://www.google.com/'\" onfocus=\"if(this.value=='https://www.google.com/')this.value=''\">",
+      "markup2": "<input class=\"input-gn6TBn5YOn7oPwjw\" name=\"u\" value=\"https://www.google.com/?gws_rd=ssl\" onkeydown=\"if (event.keyCode == 13) document.getElementById('form').submit();\">"
+    },
+    {
+      "name": "My-Proxy",
+      "link": "https://www.my-proxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"url\" placeholder=\"Website to be unblocked\" id=\"inputurl\" value=\"http://www.find-ip.net\">",
+      "markup2": "<input type=\"text\" class=\"myproxy-form-control\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" spellcheck=\"false\" id=\"myproxy-urlbar\">"
+    },
+    {
+      "name": "UndoFilters",
+      "link": "https://www.undofilters.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "HideMeBro",
+      "link": "https://www.hidemebro.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "FreeProxy",
+      "link": "https://www.freeproxy.asia/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "InstantUnblock",
+      "link": "https://instantunblock.com/",
+      "isExtra": true,
+      "markup1": "<input placeholder=\"Enter Url\" type=\"text\" autocomplete=\"off\" name=\"url\" id=\"url\" value=\"\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" autocomplete=\"off\">"
+    },
+    {
+      "name": "WebSurf",
+      "link": "https://www.websurf.in/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "HomeProxy",
+      "link": "https://www.homeproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "webproxy",
+      "link": "https://webproxy.to/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" placeholder=\"Enter web address\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input351\">"
+    },
+    {
+      "name": "Anonymster",
+      "link": "https://anonymster.com/web-proxy/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"textbox vpn-proxypage-input-field\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"\" class=\"url-input\" style=\"width:30%;\">"
+    },
+    {
+      "name": "Orange Proxy",
+      "link": "https://www.orangeproxy.net/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Zendproxy",
+      "link": "https://zendproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"search_input\" placeholder=\"Type a URL and click Go !\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Dontfilter",
+      "link": "http://dontfilter.us/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"searchinginput\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Miniprox",
+      "link": "http://miniprox.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Vload",
+      "link": "http://vload.net/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Hidebuzz",
+      "link": "http://hidebuzz.us/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Sslpro",
+      "link": "http://sslpro.org/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Xitesite",
+      "link": "http://xitesite.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Stopcensoring",
+      "link": "https://stopcensoring.me/",
+      "isExtra": true,
+      "markup1": "<input class=\"form-control\" placeholder=\"https://1337x.to\" name=\"url\" type=\"text\" autocomplete=\"off\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://searx.fmac.xyz/\" autocomplete=\"off\">"
+    },
+    {
+      "name": "2fastsurfer",
+      "link": "http://2fastsurfer.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Proxyload",
+      "link": "http://proxyload.net/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">"
+    },
+    {
+      "name": "Linkmetube",
+      "link": "http://linkmetube.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Ultimate Proxynet",
+      "link": "http://ultimateproxy.net/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "AceProxy",
+      "link": "http://aceproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Unblock123",
+      "link": "https://www.unblock123.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"url\" class=\"form-control\" id=\"websiteURL\" placeholder=\"Enter website...\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" autocomplete=\"off\">"
+    },
+    {
+      "name": "Unblock-sites",
+      "link": "https://www.unblock-sites.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"span12 form-control\" id=\"appendedInputButton\" name=\"url\" placeholder=\"Enter URL then...\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" onclick=\"this.select();\">"
+    },
+    {
+      "name": "sslsecureproxy",
+      "link": "https://www.sslsecureproxy.com/",
+      "isExtra": true,
+      "markup1": "<input class=\"white_bg radius-5\" autocomplete=\"off\" type=\"text\" name=\"u\" placeholder=\"https://www.google.com/\">",
+      "markup2": "<input autocomplete=\"off\" class=\"foreverproxy-input\" id=\"foreverproxy-u\" placeholder=\"http://www.google.com/\" type=\"text\" name=\"u\" value=\"https://www.google.com/?gws_rd=ssl\" forevermutated=\"true\">"
+    },
+    {
+      "name": "Homeproxy",
+      "link": "https://www.homeproxy.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Site2unblock",
+      "link": "https://www.site2unblock.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"url\" class=\"form-control\" id=\"websiteURL\" placeholder=\"Enter website URL here...\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" autocomplete=\"off\">"
+    },
+    {
+      "name": "UnblockAccess",
+      "link": "https://www.unblockaccess.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"url\" value=\"\" placeholder=\"http://www.youtube.com\" class=\"form-control input-lg\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" autocomplete=\"off\">"
+    },
+    {
+      "name": "Quickprox",
+      "link": "http://quickprox.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" class=\"input\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Hidenseek",
+      "link": "https://www.hidenseek.org/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" class=\"form-control textbox\" name=\"u\" id=\"input\" placeholder=\"Type the URL here...\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Unblockyouku",
+      "link": "http://www.unblockyouku.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "24tunnel",
+      "link": "http://www.24tunnel.com/#sthash.VtHumAGG.dpbs",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"40\" class=\"textbox\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Fiberprox",
+      "link": "http://fiberprox.me/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Xitenow",
+      "link": "http://xitenow.com/",
+      "isExtra": true,
+      "markup1": "<input type=\"text\" name=\"u\" id=\"input\" size=\"60\" class=\"textbox\" value=\"Enter URL\" onclick=\"this.value=''\">",
+      "markup2": "<input type=\"text\" name=\"u\" size=\"40\" value=\"https://www.google.com/?gws_rd=ssl\" class=\"url-input\" style=\"width:50%;\">"
+    },
+    {
+      "name": "Proxymesh",
+      "link": "https://proxymesh.com/web/",
+      "isExtra": true,
+      "markup1": "<input name=\"url\" type=\"text\" style=\"width:400px;\" autocomplete=\"off\" placeholder=\"http://\">",
+      "markup2": "<input type=\"text\" name=\"url\" value=\"https://www.google.com/?gws_rd=ssl\" autocomplete=\"off\">"
+    }
+  ],
+  "translate": [
+    {
+      "name": "Google translate",
+      "link": "https://translate.google.com/?ui=tob",
+      "isExtra": false,
+      "markup1": "<textarea id=\"source\" class=\"orig tlid-source-text-input goog-textarea\" rows=\"1\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" style=\"overflow: auto hidden; box-sizing: border-box; height: 48px; padding-bottom: 18px; direction: ltr;\"></textarea>",
+      "markup2": "<input id=\"gbqfq\" class=\"gbqfif\" name=\"q\" type=\"text\" autocomplete=\"off\" value=\"\">"
+    },
+    {
+      "name": "Yandex.Translate",
+      "link": "https://translate.yandex.com/",
+      "isExtra": false,
+      "markup1": "<div id=\"fakeArea\" class=\"fakearea textinput textlayer\" tabindex=\"1\" autocorrect=\"off\" autocomplete=\"off\" autocapitalize=\"off\" spellcheck=\"false\" contenteditable=\"true\"></div>",
+      "markup2": "<input id=\"urlInput\" type=\"text\" class=\"textinput\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" placeholder=\"Enter a website address\">"
+    }
+  ],
+  "archive": [
+    {
+      "name": "Wayback Machine",
+      "link": "https://archive.org/web/",
+      "isExtra": false,
+      "markup1": "<input id=\"wwmurl\" class=\"web_input web_text\" type=\"text\" name=\"url\" placeholder=\"http://\">",
+      "markup2": "<input aria-activedescendant=\"\" aria-autocomplete=\"both\" aria-expanded=\"false\" aria-haspopup=\"listbox\" aria-owns=\"\" autocomplete=\"nope\" role=\"combobox\" type=\"text\" class=\"rbt-input-main form-control rbt-input \" value=\"google.com\">"
+    }
+  ]
+}
