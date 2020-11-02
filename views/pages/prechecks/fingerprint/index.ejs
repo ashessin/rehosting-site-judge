@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../../../partials/head.ejs %>
+
+<body>
+<% include ../../../partials/nav.ejs %>
+<main>
+    <h1><%= title %></h1>
+    <hr>
+    <aside>
+        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
+    </aside>
+    <kbd>request-fingerprint</kbd>
+    <pre><code id="request-fingerprint"><%- JSON.stringify(requestFingerprint, null, 2) %></code></pre>
+    <kbd>request-headers</kbd>
+    <pre><code id="request-headers"><%- JSON.stringify(requestHeaders, null, 2) %></code></pre>
+    <kbd>client-user-agent</kbd>
+    <pre><code id="client-user-agent"></code></pre>
+    <kbd>client-dnt</kbd>
+    <pre><code id="client-dnt"></code></pre>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const e = document.getElementById("client-user-agent");
+        e.innerText = navigator.userAgent
+
+        const f = document.getElementById("client-dnt")
+        f.innerText = (navigator.doNotTrack > 0).toString()
+    })
+</script>
+</body>
+</html>

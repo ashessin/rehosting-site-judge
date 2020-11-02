@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../../../partials/head.ejs %>
+
+<body>
+<% include ../../../partials/nav.ejs %>
+<main>
+    <h1><%= title %></h1>
+    <hr>
+    <aside>
+        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
+    </aside>
+    <kbd>navigator-cookies-enabled</kbd>
+    <pre><code id="navigator-cookies-enabled"></code></pre>
+    <kbd>request-cookies</kbd>
+    <pre><code id="request-cookies"><%- JSON.stringify(requestCookies, null, 2) %></code></pre>
+    <kbd>document-cookies</kbd>
+    <pre><code id="document-cookies"></code></pre>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function getCookies(tld) {
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookies = Object.fromEntries(decodedCookie.split(';')
+                .map(cookie => cookie.trim())
+                .map(cookie => {
+                    return [
+                        cookie.split('=')[0],
+                        cookie.split('=').slice(1).join('=')
+                    ]
+                }));
+            if (tld !== "") {
+                const tldCookies = Object.keys(cookies).filter(cookieKey => {
+                    return cookieKey.indexOf(tld) > -1;
+                });
+                return tldCookies.reduce((a, e) => (a[e] = cookies[e], a), {});
+            }
+            return cookies
+        }
+
+        function setCookie(name, value) {
+            const date = new Date();
+            date.setTime(date.getTime() + 18000000);
+            const expires = "; expires=" + date.toUTCString();
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        setCookie("clientCookie", new Date().getTime())
+        document.getElementById('document-cookies').innerHTML = JSON.stringify(getCookies(""), null, 2)
+
+        document.getElementById('navigator-cookies-enabled').innerHTML = navigator.cookieEnabled.toString()
+    })
+</script>
+</body>
+
+</html>

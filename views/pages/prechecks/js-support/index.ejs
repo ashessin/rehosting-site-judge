@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../../../partials/head.ejs %>
+
+<body>
+<% include ../../../partials/nav.ejs %>
+<main>
+    <h1><%= title %></h1>
+    <hr>
+    <aside>
+        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
+    </aside>
+    <kbd>preload-js-support</kbd>
+    <div class="row">
+        <div class="col-4">
+            <pre><code><noscript id="preload-js-support">false</noscript></code></pre>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <kbd>postload-js-support</kbd>
+    <div class="row">
+        <div class="col-4">
+            <pre><code id="postload-js-support">unchecked</code></pre>
+        </div>
+        <div class="col">
+            <button id="check-postload-js-support" onclick="checkPostJsSupport()">
+                Check Postload JS Support
+            </button>
+        </div>
+    </div>
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const noscript = document.getElementById("preload-js-support");
+        const e = noscript.parentElement
+        noscript.remove();
+        e.setAttribute("id", "preload-js-support")
+        e.innerHTML = 'true'
+    })
+
+    function checkPostJsSupport() {
+        document.getElementById("postload-js-support").innerHTML = 'true'
+    }
+</script>
+</body>
+
+</html>
