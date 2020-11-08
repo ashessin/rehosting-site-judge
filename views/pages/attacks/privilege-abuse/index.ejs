@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../../../partials/head.ejs %>
+
+<body>
+<% include ../../../partials/nav.ejs %>
+<main>
+    <h1><%= title %></h1>
+    <hr>
+    <aside>
+        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
+    </aside>
+    <kbd>geolocation-permission</kbd>
+    <pre><code id="geolocation-permission"></code></pre>
+    <div class="row">
+        <div class="col">
+            <kbd>latitude</kbd>
+            <pre><code id="latitude"></code></pre>
+        </div>
+        <div class="col">
+            <kbd>longitude</kbd>
+            <pre><code id="longitude"></code></pre>
+        </div>
+    </div>
+
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function handlePermission() {
+            navigator.permissions.query({name: 'geolocation'}).then(function (result) {
+                if (result.state === 'granted') {
+                    report(result.state);
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else if (result.state === 'prompt') {
+                    report(result.state);
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else if (result.state === 'denied') {
+                    report(result.state);
+                }
+                result.onchange = function () {
+                    report(result.state);
+                }
+            });
+        }
+
+        function report(state) {
+            document.getElementById("geolocation-permission").innerHTML = state
+        }
+
+        function showPosition(position) {
+            document.getElementById("latitude").innerHTML = position.coords.latitude
+            document.getElementById("longitude").innerHTML = position.coords.longitude
+        }
+
+        handlePermission()
+    })
+</script>
+</body>
+
+</html>
