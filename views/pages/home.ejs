@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head.ejs %>
+
+<body>
+<% include ../partials/nav.ejs %>
+<main>
+    <h1><%= title %></h1>
+    <hr>
+    <aside>
+        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
+    </aside>
+
+    <kbd>username</kbd>
+    <pre><code id="username"></code></pre>
+
+
+    <kbd>service-worker-mitm</kbd>
+    <div class="row">
+        <div class="col">
+            <p>Loads a 32x32px image on the right if not compromised by the
+                MITM attack.</p>
+        </div>
+        <div class="col">
+            <img id="service-worker-mitm" class="float-right" src="/favicon-32x32.png?q=<%- randomInt %>>" alt=""/>
+        </div>
+    </div>
+
+</main>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    })
+</script>
+</body>
+
+</html>
