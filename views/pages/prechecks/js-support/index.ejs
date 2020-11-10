@@ -36,11 +36,11 @@
         const e = noscript.parentElement
         noscript.remove();
         e.setAttribute("id", "preload-js-support")
-        e.innerHTML = 'true'
+        e.innerText = 'true'
     })
 
     function checkPostJsSupport() {
-        document.getElementById("postload-js-support").innerHTML = 'true'
+        document.getElementById("postload-js-support").innerText = 'true'
     }
 </script>
 </body>

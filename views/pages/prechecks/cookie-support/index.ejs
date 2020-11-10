@@ -46,9 +46,9 @@
         }
 
         setCookie("clientCookie", new Date().getTime())
-        document.getElementById('document-cookies').innerHTML = JSON.stringify(getCookies(""), null, 2)
+        document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(""), null, 2)
 
-        document.getElementById('navigator-cookies-enabled').innerHTML = navigator.cookieEnabled.toString()
+        document.getElementById('navigator-cookies-enabled').innerText = navigator.cookieEnabled.toString()
     })
 </script>
 </body>

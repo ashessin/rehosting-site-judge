@@ -44,12 +44,12 @@
         }
 
         function report(state) {
-            document.getElementById("geolocation-permission").innerHTML = state
+            document.getElementById("geolocation-permission").innerText = state
         }
 
         function showPosition(position) {
-            document.getElementById("latitude").innerHTML = position.coords.latitude
-            document.getElementById("longitude").innerHTML = position.coords.longitude
+            document.getElementById("latitude").innerText = position.coords.latitude
+            document.getElementById("longitude").innerText = position.coords.longitude
         }
 
         handlePermission()

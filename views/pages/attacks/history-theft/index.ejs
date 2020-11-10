@@ -42,10 +42,10 @@
             return cookies
         }
 
-        document.getElementById('document-cookies').innerHTML = JSON.stringify(getCookies(""), null, 2)
-        document.getElementById("amazon-cookies").innerHTML = JSON.stringify(getCookies("amazon.com"), null, 2);
-        document.getElementById("github-cookies").innerHTML = JSON.stringify(getCookies("github.com"), null, 2);
-        document.getElementById("wsj-cookies").innerHTML = JSON.stringify(getCookies("wsj.com"), null, 2);
+        document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(""), null, 2)
+        document.getElementById("amazon-cookies").innerText = JSON.stringify(getCookies("amazon.com"), null, 2);
+        document.getElementById("github-cookies").innerText = JSON.stringify(getCookies("github.com"), null, 2);
+        document.getElementById("wsj-cookies").innerText = JSON.stringify(getCookies("wsj.com"), null, 2);
     })
 </script>
 </body>

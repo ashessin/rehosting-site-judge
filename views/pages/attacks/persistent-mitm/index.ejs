@@ -51,8 +51,8 @@
             registrations.forEach(registration => {
                 if (registration.active !== null &&
                     registration.active.scriptURL.endsWith('bad-service-worker.js')) {
-                    document.getElementById('service-worker-status').innerHTML = 'success'
-                    document.getElementById('registered-service-worker').innerHTML = registration.scriptURL
+                    document.getElementById('service-worker-status').innerText = 'success'
+                    document.getElementById('registered-service-worker').innerText = registration.scriptURL
                 }
             })
         });
@@ -70,12 +70,12 @@
             // site using the provided scope.
             navigator.serviceWorker.register(path, {scope}).then(registration => {
                 console.log('Service worker registration succeeded:', registration);
-                document.getElementById('service-worker-status').innerHTML = 'success'
-                document.getElementById('registered-service-worker').innerHTML = path
+                document.getElementById('service-worker-status').innerText = 'success'
+                document.getElementById('registered-service-worker').innerText = path
                 return 1
             }, error => {
                 console.log('Service worker registration failed:', error);
-                document.getElementById('service-worker-status').innerHTML = 'failed'
+                document.getElementById('service-worker-status').innerText = 'failed'
                 return 0
             });
         } else {
