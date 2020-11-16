@@ -34,51 +34,51 @@
 </main>
 <script id="service-worker-js" type="text/plain" src="/bad-service-worker.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
         let serviceWorkerPath = new URL(document
             .getElementById('service-worker-js')
             .src
         )
-        if (location.protocol !== serviceWorkerPath.protocol)
-            serviceWorkerPath.protocol = location.protocol
+
+        // HTTPS is required
+        serviceWorkerPath.protocol = 'https:'
 
         document.getElementById('service-worker-path').value = serviceWorkerPath
 
         const serviceWorkerScopes = ['/', './']
         for (const serviceWorkerScope of serviceWorkerScopes) {
             document.getElementById('service-worker-scope').value = serviceWorkerScope
-            const isSuccess = registerServiceWorker()
-            if (isSuccess === 1 || isSuccess === -1) break;
+            const isSuccess = await registerServiceWorker()
+            console.log("isSuccess", isSuccess)
+            if (isSuccess === 1) break;
         }
     })
 
     function registerServiceWorker() {
         const serviceWorkerPath = document.getElementById('service-worker-path').value
         const serviceWorkerScope = document.getElementById('service-worker-scope').value
-        let isSuccess = 0
+        let isSuccess
         if ('serviceWorker' in navigator) {
             // Register a service worker hosted at the root of the
             // site using the provided scope.
-            navigator.serviceWorker.register(serviceWorkerPath, {scope: serviceWorkerScope})
+            isSuccess = navigator.serviceWorker
+                .register(serviceWorkerPath, {scope: serviceWorkerScope})
                 .then(registration => {
                     console.log('Service worker registration succeeded:', registration);
                     document.getElementById('registered-service-worker-status').innerText = 'success'
                     document.getElementById('registered-service-worker-scope').innerText = registration.scope
-                    isSuccess = 1
+                    return 1
                 }, error => {
                     console.log('Service worker registration failed:', error);
                     document.getElementById('registered-service-worker-status').innerText = 'failed'
-                    isSuccess = 0
+                    return 0
                 })
-                .finally(() => {
-                    console.log(isSuccess)
-                    return isSuccess
-                });
         } else {
             console.log('Service workers are not supported.');
             document.getElementById('registered-service-worker-status').innerText = 'unsupported'
-            return isSuccess
+            isSuccess = -1
         }
+        return isSuccess
     }
 </script>
 </body>
