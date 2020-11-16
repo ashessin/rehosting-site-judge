@@ -21,10 +21,4 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // fires whenever the app requests a resource (file or data)
   console.log(`SW: Fetching ${event.request.url}`)
-  // next, go get the requested resource from the network,
-  // nothing fancy going on here.
-  if (event.request.url.includes('favicon-32x32.png')) {
-    console.log('SW: Replacing favicon-32x32.png with 404.png')
-    event.respondWith(fetch(new Request('404.png')))
-  }
 })
