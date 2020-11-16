@@ -9,21 +9,21 @@ router.get(
   '/',
   (req, res) => {
   // eslint-disable-next-line node/no-deprecated-api
-    const parsedUrl = url.parse(req.url, true)
+    const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
     res.render('index', { title: 'Welcome', parsedUrl: parsedUrl })
   })
 
 router.get(
   '/login',
   (req, res) => {
-    const parsedUrl = url.parse(req.url, true)
+    const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
     res.render('pages/login', { title: 'Login', parsedUrl: parsedUrl })
   })
 
 router.post(
   '/home',
   (req, res) => {
-    const parsedUrl = url.parse(req.url, true)
+    const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
     const randomInt = Math.floor(Math.random() * 100)
     res.render('pages/home', { title: 'Home', parsedUrl: parsedUrl, randomInt: randomInt })
   })
@@ -31,7 +31,7 @@ router.post(
 router.get(
   '/home',
   (req, res) => {
-    const parsedUrl = url.parse(req.url, true)
+    const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
     const randomInt = Math.floor(Math.random() * 100)
     res.render('pages/home', { title: 'Home', parsedUrl: parsedUrl, randomInt: randomInt })
   })
@@ -39,7 +39,7 @@ router.get(
 router.get(
   '/location',
   (req, res) => {
-    const parsedUrl = url.parse(req.url, true)
+    const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
     res.render('pages/location', { title: 'Location', parsedUrl: parsedUrl })
   })
 
@@ -62,7 +62,7 @@ router.get(
     if (hasAccess(`views/pages/${req.params.category}s/${req.params.name}`)) {
       next(createError(404))
     } else {
-      const parsedUrl = url.parse(req.url, true)
+      const parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl, true)
       const reqHeaders = req.headers
       const serverFingerprint = req.fingerprint
       const requestCookies = req.cookies
