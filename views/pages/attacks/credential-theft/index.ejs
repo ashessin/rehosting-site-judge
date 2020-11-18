@@ -14,21 +14,28 @@
     <form>
         <div class="row">
             <div class="col-4">
-                <label for="username"></label>
-                <input id="username" type="text" placeholder="Username"autocomplete="username">
-                <label for="password"></label>
-                <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+                <label for="username-rsj"></label>
+                <input id="username-rsj" type="text" placeholder="Username" autocomplete="username">
+                <label for="password-rsj"></label>
+                <input id="password-rsj" type="password" placeholder="Password" autocomplete="current-password">
             </div>
             <div class="col">
-                <button type="submit">Submit</button>
+                <p>Click anywhere to reveal autofilled password (if any) below.</p>
             </div>
         </div>
+        <kbd>autofilled-password</kbd>
+        <pre><code id="autofilled-password"></code></pre>
     </form>
 
 </main>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const passwordInput = document.getElementById('password-rsj')
+        passwordInput.addEventListener('blur', revealAutofilledPassword)
 
+        function revealAutofilledPassword() {
+            document.getElementById('autofilled-password').innerText = this.value
+        }
     })
 </script>
 </body>
