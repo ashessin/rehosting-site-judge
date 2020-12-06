@@ -7,17 +7,22 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
-
+    <% include ../../../partials/url.ejs %>
     <form>
         <div class="row">
             <div class="col-4">
                 <label for="username-rsj"></label>
-                <input id="username-rsj" type="text" placeholder="Username" autocomplete="username">
+                <input id="username-rsj"
+                       name="username"
+                       type="text"
+                       placeholder="Username"
+                       autocomplete="username">
                 <label for="password-rsj"></label>
-                <input id="password-rsj" type="password" placeholder="Password" autocomplete="current-password">
+                <input id="password-rsj"
+                       name="password"
+                       type="password"
+                       placeholder="Password"
+                       autocomplete="current-password">
             </div>
             <div class="col">
                 <p>Click anywhere to reveal autofilled password (if any) below.</p>
@@ -26,17 +31,15 @@
         <kbd>autofilled-password</kbd>
         <pre><code id="autofilled-password"></code></pre>
     </form>
-
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const passwordInput = document.getElementById('password-rsj')
-        passwordInput.addEventListener('blur', revealAutofilledPassword)
+  document.addEventListener("DOMContentLoaded", function () {
+    function revealAutofilledPassword () {
+      document.getElementById('autofilled-password').innerText = this.value
+    }
 
-        function revealAutofilledPassword() {
-            document.getElementById('autofilled-password').innerText = this.value
-        }
-    })
+    document.getElementById('password-rsj').addEventListener('blur', revealAutofilledPassword)
+  })
 </script>
 </body>
 

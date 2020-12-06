@@ -7,9 +7,16 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <kbd>parsed-url</kbd>
-    <pre><code id="parsed-url"><%- JSON.stringify(parsedUrl, null, 2) %></code></pre>
+    <kbd>request-url</kbd>
+    <pre><code id="request-url"><%- JSON.stringify(url, null, 2) %></code></pre>
+    <kbd>window-location-href</kbd>
+    <pre><code id="window-location-href"></code></pre>
 </main>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", async function () {
+    document.getElementById('window-location-href').innerText = window.location.href
+  })
+</script>
 
 </html>

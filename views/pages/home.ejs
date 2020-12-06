@@ -7,10 +7,7 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
-
+    <% include ../partials/url.ejs %>
     <kbd>username</kbd>
     <pre><code id="username"><%= username %></code></pre>
 </main>

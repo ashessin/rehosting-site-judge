@@ -7,9 +7,7 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
+    <% include ../../../partials/url.ejs %>
     <kbd>preload-js-support</kbd>
     <div class="row">
         <div class="col-4">
@@ -31,17 +29,17 @@
     </div>
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const noscript = document.getElementById("preload-js-support");
-        const e = noscript.parentElement
-        noscript.remove();
-        e.setAttribute("id", "preload-js-support")
-        e.innerText = 'true'
-    })
+  document.addEventListener("DOMContentLoaded", function () {
+    const noscript = document.getElementById("preload-js-support");
+    const noscriptParent = noscript.parentElement
+    noscript.remove();
+    noscriptParent.setAttribute("id", "preload-js-support")
+    noscriptParent.innerText = 'true'
+  })
 
-    function checkPostJsSupport() {
-        document.getElementById("postload-js-support").innerText = 'true'
-    }
+  function checkPostJsSupport () {
+    document.getElementById("postload-js-support").innerText = 'true'
+  }
 </script>
 </body>
 

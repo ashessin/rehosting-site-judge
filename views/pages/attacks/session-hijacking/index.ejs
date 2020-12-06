@@ -7,9 +7,7 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
+    <% include ../../../partials/url.ejs %>
     <kbd>navigator-cookies-enabled</kbd>
     <pre><code id="navigator-cookies-enabled"></code></pre>
     <kbd>can-access-client-cookie</kbd>
@@ -22,41 +20,29 @@
     <pre><code id="document-cookies"></code></pre>
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function getCookies(tld) {
-            const decodedCookie = decodeURIComponent(document.cookie);
-            const cookies = Object.fromEntries(decodedCookie.split(';')
-                .map(cookie => cookie.trim())
-                .map(cookie => {
-                    return [
-                        cookie.split('=')[0],
-                        cookie.split('=').slice(1).join('=')
-                    ]
-                }));
-            if (tld !== "") {
-                const tldCookies = Object.keys(cookies).filter(cookieKey => {
-                    return cookieKey.indexOf(tld) > -1;
-                });
-                return tldCookies.reduce((a, e) => (a[e] = cookies[e], a), {});
-            }
-            return cookies
-        }
+  document.addEventListener("DOMContentLoaded", function () {
+    function getCookies (tld) {
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const cookies = Object.fromEntries(decodedCookie.split(';')
+        .map(cookie => cookie.trim())
+        .map(cookie => [cookie.split('=')[0], cookie.split('=').slice(1).join('=')]));
+      if (tld) {
+        return Object.keys(cookies)
+          .filter(cookieKey => cookieKey.indexOf(tld) > -1)
+          .reduce((a, e) => (a[e] = cookies[e], a), {});
+      }
+      return cookies
+    }
 
-        const clientCookie = getCookies("clientCookie")
-        if (Object.keys(clientCookie).length === 0 && clientCookie.constructor === Object)
-            document.getElementById('can-access-client-cookie').innerText = 'false'
-        else
-            document.getElementById('can-access-client-cookie').innerText = 'true'
+    function isEmptyObject (obj) {
+      return Object.keys(obj).length === 0 && obj.constructor === Object ? 'false' : 'true'
+    }
 
-        const httpOnlyCookie = getCookies("serverCookieHttpOnly")
-        if (Object.keys(httpOnlyCookie).length === 0 && httpOnlyCookie.constructor === Object)
-            document.getElementById('can-access-http-only-cookie').innerText = 'false'
-        else
-            document.getElementById('can-access-http-only-cookie').innerText = 'true'
-
-        document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(""), null, 2)
-        document.getElementById('navigator-cookies-enabled').innerText = navigator.cookieEnabled.toString()
-    })
+    document.getElementById('can-access-client-cookie').innerText = isEmptyObject(getCookies("Cookie"))
+    document.getElementById('can-access-http-only-cookie').innerText = isEmptyObject(getCookies("serverCookieHttpOnly"))
+    document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(), null, 2)
+    document.getElementById('navigator-cookies-enabled').innerText = navigator.cookieEnabled.toString()
+  })
 </script>
 </body>
 

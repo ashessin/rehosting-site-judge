@@ -1,16 +1,15 @@
 <head>
     <title><%= title %></title>
-<!--    <link rel='stylesheet' href='/styles/classless.css'/>-->
 </head>
 <style>
     /* Classless.css v0.92
 
-Table of Contents:
- 1. Custom Settings
- 2. Base Tags
- 3. Extra Tags
- 4. Classes
-*/
+    Table of Contents:
+     1. Custom Settings
+     2. Base Tags
+     3. Extra Tags
+     4. Classes
+    */
 
     /* 1. Custom Settings
     –––––––––––––––––––––––––––––––––––––––––––– */
@@ -679,16 +678,20 @@ Table of Contents:
         }
     }
 
+    /* Custom CSS*/
+
     <% if (process.env.MODE === 'vastavik') { %>
     body {
         background-color: #effaf2;
     }
+
     <% } %>
 
     <% if (process.env.MODE === 'kalpanik') { %>
     body {
         background-color: #feecf0;
     }
+
     <% } %>
 
     textarea, input, button, select {

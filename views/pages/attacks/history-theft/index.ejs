@@ -7,46 +7,29 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
+    <% include ../../../partials/url.ejs %>
     <kbd>request-cookies</kbd>
     <pre><code id="request-cookies"><%- JSON.stringify(requestCookies, null, 2) %></code></pre>
     <kbd>document-cookies</kbd>
     <pre><code id="document-cookies"></code></pre>
-    <kbd>amazon-cookies</kbd>
-    <pre><code id="amazon-cookies"></code></pre>
-    <kbd>github-cookies</kbd>
-    <pre><code id="github-cookies"></code></pre>
-    <kbd>wjs-cookies</kbd>
-    <pre><code id="wsj-cookies"></code></pre>
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function getCookies(tld) {
-            const decodedCookie = decodeURIComponent(document.cookie);
-            const cookies = Object.fromEntries(decodedCookie.split(';')
-                .map(cookie => cookie.trim())
-                .map(cookie => {
-                    return [
-                        cookie.split('=')[0],
-                        cookie.split('=').slice(1).join('=')
-                    ]
-                }));
-            if (tld !== "") {
-                const tldCookies = Object.keys(cookies).filter(cookieKey => {
-                    return cookieKey.indexOf(tld) > -1;
-                });
-                return tldCookies.reduce((a, e) => (a[e] = cookies[e], a), {});
-            }
-            return cookies
-        }
+  document.addEventListener("DOMContentLoaded", function () {
+    function getCookies (tld) {
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const cookies = Object.fromEntries(decodedCookie.split(';')
+        .map(cookie => cookie.trim())
+        .map(cookie => [cookie.split('=')[0], cookie.split('=').slice(1).join('=')]));
+      if (tld) {
+        return Object.keys(cookies)
+          .filter(cookieKey => cookieKey.indexOf(tld) > -1)
+          .reduce((a, e) => (a[e] = cookies[e], a), {});
+      }
+      return cookies
+    }
 
-        document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(""), null, 2)
-        document.getElementById("amazon-cookies").innerText = JSON.stringify(getCookies("amazon.com"), null, 2);
-        document.getElementById("github-cookies").innerText = JSON.stringify(getCookies("github.com"), null, 2);
-        document.getElementById("wsj-cookies").innerText = JSON.stringify(getCookies("wsj.com"), null, 2);
-    })
+    document.getElementById('document-cookies').innerText = JSON.stringify(getCookies(), null, 2)
+  })
 </script>
 </body>
 

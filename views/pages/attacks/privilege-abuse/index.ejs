@@ -7,9 +7,7 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
+    <% include ../../../partials/url.ejs %>
     <kbd>geolocation-permission</kbd>
     <pre><code id="geolocation-permission"></code></pre>
     <div class="row">
@@ -22,38 +20,37 @@
             <pre><code id="longitude"></code></pre>
         </div>
     </div>
-
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function handlePermission() {
-            navigator.permissions.query({name: 'geolocation'}).then(function (result) {
-                if (result.state === 'granted') {
-                    report(result.state);
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else if (result.state === 'prompt') {
-                    report(result.state);
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else if (result.state === 'denied') {
-                    report(result.state);
-                }
-                result.onchange = function () {
-                    report(result.state);
-                }
-            });
+  document.addEventListener("DOMContentLoaded", function () {
+    function handlePermission () {
+      navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
+        if (result.state === 'granted') {
+          report(result.state);
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else if (result.state === 'prompt') {
+          report(result.state);
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else if (result.state === 'denied') {
+          report(result.state);
         }
-
-        function report(state) {
-            document.getElementById("geolocation-permission").innerText = state
+        result.onchange = function () {
+          report(result.state);
         }
+      });
+    }
 
-        function showPosition(position) {
-            document.getElementById("latitude").innerText = position.coords.latitude
-            document.getElementById("longitude").innerText = position.coords.longitude
-        }
+    function report (state) {
+      document.getElementById("geolocation-permission").innerText = state
+    }
 
-        handlePermission()
-    })
+    function showPosition (position) {
+      document.getElementById("latitude").innerText = position.coords.latitude.toString()
+      document.getElementById("longitude").innerText = position.coords.longitude.toString()
+    }
+
+    handlePermission()
+  })
 </script>
 </body>
 

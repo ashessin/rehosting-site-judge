@@ -7,9 +7,7 @@
 <main>
     <h1><%= title %></h1>
     <hr>
-    <aside>
-        <pre><%- JSON.stringify(parsedUrl, null, 2) %></pre>
-    </aside>
+    <% include ../../../partials/url.ejs %>
     <kbd>request-fingerprint</kbd>
     <pre><code id="request-fingerprint"><%- JSON.stringify(requestFingerprint, null, 2) %></code></pre>
     <kbd>request-headers</kbd>
@@ -20,13 +18,10 @@
     <pre><code id="client-dnt"></code></pre>
 </main>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const e = document.getElementById("client-user-agent");
-        e.innerText = navigator.userAgent
-
-        const f = document.getElementById("client-dnt")
-        f.innerText = (navigator.doNotTrack > 0).toString()
-    })
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("client-user-agent").innerText = navigator.userAgent
+    document.getElementById("client-dnt").innerText = (navigator.doNotTrack > 0).toString()
+  })
 </script>
 </body>
 </html>
