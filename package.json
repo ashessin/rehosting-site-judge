@@ -13,7 +13,7 @@
     "express-fingerprint": "^1.2.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "node-sass-middleware": "0.11.0"
+    "node-sass-middleware": "1.1.0"
   },
   "devDependencies": {
     "eslint": "^7.14.0",
